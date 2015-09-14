@@ -7,11 +7,17 @@
 
 'use strict';
 
-
-fis.config.merge({
-    modules: {
-        parser: {
-            tpl: 'ractive' // tpl 后缀使用sulky-parser-ractive 来处理
-        }
-    }
-});
+/**
+ * 使用hook('amd')使isMod生效
+ */
+fis.hook('amd')
+	//匹配规则
+	//项目中按实际情况配置
+	.match('components.html', {
+		//parser
+		parser: 'ractive',
+		//更改后缀为js
+		rExt: '.js',
+		//标记为模块
+		isMod: true
+	})

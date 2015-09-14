@@ -1,6 +1,6 @@
 {
   "name": "sulky-parser-ractive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a ractive parser for sulky",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,15 @@
   },
   "homepage": "https://github.com/shingle/sulky-parser-ractive",
   "dependencies": {
-    "ractive": "^0.7.2"
-  }
+    "ractive": "^0.7.2",
+    "rcu": "^0.4.2",
+    "rcu-builders": "^0.2.0"
+  },
+  "readme": "# sulky-parser-ractive\r\na ractive parser for sulky\r\n",
+  "readmeFilename": "README.md",
+  "gitHead": "637a67a6c64b4f9d654f7f004a20e85faa90cb78",
+  "_id": "sulky-parser-ractive@1.0.0",
+  "_shasum": "3f68d5fddafb6f05926e4e5d8a4e72daeb817db3",
+  "_from": "..\\sulky-parser-ractive",
+  "_resolved": "file:..\\sulky-parser-ractive"
 }

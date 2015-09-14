@@ -7,19 +7,24 @@
 
 'use strict';
 
-/*
- fis.config.merge({
- modules: {
- parser: {
- tpl: 'ractive' // tpl 后缀使用sulky-parser-ractive 来处理
- }
- }
- });*/
-
+var rcu = require('rcu');
+var builders = require('rcu-builders');
 var Ractive = require('ractive');
 
-module.exports = function (content) {
+// Initialise ractive component utils
+rcu.init(Ractive);
 
-    return Ractive.parse(content);
+module.exports = function createModule(content, file, conf) {
+
+
+	var definition = rcu.parse(content);
+
+	console.log(conf);
+
+
+	var cjsModule = builders.cjs(definition);
+
+
+	return cjsModule
 
 };
